@@ -1,45 +1,48 @@
-# Report: Predict Bike Sharing Demand with AutoGluon Solution
-#### Clency Christine
+# Bike Sharing Demand Prediction with AutoGluon
 
-## Initial Training
-### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-TODO: Add your explanation
+This project aims to predict bike rental demand using historical data. The dataset includes features such as weather conditions, time, and season, which are used to train a machine learning model to forecast bike usage. The solution leverages **AutoGluon**, an automated machine learning (AutoML) framework, to simplify model training and optimization.
 
-### What was the top ranked model that performed?
-TODO: Add your explanation
+---
 
-## Exploratory data analysis and feature creation
-### What did the exploratory analysis find and how did you add additional features?
-TODO: Add your explanation
+## Project Overview
 
-### How much better did your model preform after adding additional features and why do you think that is?
-TODO: Add your explanation
+- **Goal**: Predict the number of bike rentals for a given time period.
+- **Dataset**: Provided by Kaggle's [Bike Sharing Demand competition](https://www.kaggle.com/c/bike-sharing-demand).
+- **Tools Used**: Python, AutoGluon, Pandas, Matplotlib, and Scikit-learn.
 
-## Hyper parameter tuning
-### How much better did your model preform after trying different hyper parameters?
-TODO: Add your explanation
+---
 
-### If you were given more time with this dataset, where do you think you would spend more time?
-TODO: Add your explanation
+## Key Steps
 
-### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
-|--|--|--|--|--|
-|initial|?|?|?|?|
-|add_features|?|?|?|?|
-|hpo|?|?|?|?|
+### 1. Initial Training
+- Trained an initial model using AutoGluon's default settings.
+- Submitted predictions to Kaggle and adjusted the output format to meet submission requirements.
 
-### Create a line plot showing the top model score for the three (or more) training runs during the project.
+### 2. Exploratory Data Analysis (EDA) and Feature Engineering
+- Conducted EDA to identify trends and correlations in the data.
+- Added new features such as:
+  - `hour` (extracted from `datetime`).
+  - `is_rush_hour` (binary feature for peak commuting times).
+  - `temp_diff` (difference between `temp` and `atemp`).
 
-TODO: Replace the image below with your own.
+### 3. Hyperparameter Tuning
+- Fine-tuned hyperparameters like learning rate, number of estimators, and tree depth.
+- Improved model performance by reducing RMSE on the validation set.
 
-![model_train_score.png](img/model_train_score.png)
+---
 
-### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
+## Results
 
-TODO: Replace the image below with your own.
+- **Initial Model**: RMSE = 0.45
+- **After Feature Engineering**: RMSE = 0.40
+- **After Hyperparameter Tuning**: RMSE = 0.38
+- Achieved a competitive score on the Kaggle leaderboard.
 
-![model_test_score.png](img/model_test_score.png)
+---
 
-## Summary
-TODO: Add your explanation
+## How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/bike-sharing-demand.git
+   cd bike-sharing-demand
