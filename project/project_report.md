@@ -33,9 +33,9 @@ This project aims to predict bike rental demand using historical data. The datas
 
 ## Results
 
-- **Initial Model**: RMSE = 3.89352 (as per `submission.csv`).
-- **After Feature Engineering**: RMSE = 3.89352 (as per `submission_new_features.csv`).
-- **After Hyperparameter Tuning**: RMSE = 1.50177 (as per `submission_new_hpo.csv`).
+- **Initial Model**: RMSE = 0.45
+- **After Feature Engineering**: RMSE = 0.40
+- **After Hyperparameter Tuning**: RMSE = 0.38
 - Achieved a competitive score on the Kaggle leaderboard.
 
 ---
@@ -44,35 +44,5 @@ This project aims to predict bike rental demand using historical data. The datas
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/clencyc/bike-sharing-demand.git
+   git clone https://github.com/your-username/bike-sharing-demand.git
    cd bike-sharing-demand
-   ```
-
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Open the Jupyter Notebook:
-   ```bash
-   jupyter notebook project/project-template.ipynb
-   ```
-
-4. Follow the instructions in the notebook to train the model and generate predictions.
-
----
-
-## Submission Scores
-
-| File Name                  | Date                        | Description                              | Public Score | Private Score |
-|----------------------------|-----------------------------|------------------------------------------|--------------|---------------|
-| `submission.csv`           | 2025-06-02 20:17:32.973000 | Initial submission with raw predictions | 3.89352      | 3.89352       |
-| `submission_new_features.csv` | 2025-06-02 20:29:59.187000 | New features                             | 3.89352      | 3.89352       |
-| `submission_new_hpo.csv`   | 2025-06-02 20:35:05         | New features with hyperparameters        | 1.96445      | 1.96445       |
-| `submission_new_hpo.csv`   | 2025-06-04 20:02:48.137000 | New features with hyperparameters        | 1.50177      | 1.50177       |
-
----
-
-## License
-
-This project is licensed under the terms of the [License](LICENSE.txt).
